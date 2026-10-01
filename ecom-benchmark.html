@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Competitive Benchmark: Centrepoint vs. Namshi, Myntra, Shein | Urvashi Ravaria</title>
+<meta name="description" content="Competitive UX benchmark of Centrepoint's Women's CLP, PLP and PDP against Namshi, Myntra and Shein — online merchandising audit with three evidence-backed recommendations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5F1E6;
+    --cream-dim:#EFE9DA;
+    --gold:#C89B3C;
+    --charcoal:#211F1A;
+    --line-light:#DAD3C2;
+    --navy:#122040;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--cream);
+    color:var(--charcoal);
+    font-family:'Work Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:3rem 1.5rem 5rem;}
+  .back{
+    display:inline-block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.75rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:#9C7A28;
+    text-decoration:none;
+    margin-bottom:2.5rem;
+    border-bottom:1px solid transparent;
+  }
+  .back:hover{border-bottom-color:#9C7A28;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:#9C7A28;
+    display:block;
+    margin-bottom:1rem;
+  }
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(1.8rem, 5vw, 2.6rem);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    margin-bottom:1.4rem;
+  }
+  .lede{
+    font-size:1.08rem;
+    line-height:1.65;
+    color:#4A473E;
+    max-width:600px;
+    margin-bottom:2rem;
+  }
+  .tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:3rem;}
+  .tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.68rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    padding:0.28rem 0.55rem;
+    border:1px solid var(--line-light);
+    border-radius:2px;
+    color:#6B6552;
+    background:var(--cream-dim);
+  }
+  h2.section-head{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.35rem;
+    margin:0 0 0.9rem;
+    padding-top:0.4rem;
+  }
+  h3.sub-head{
+    font-family:'Work Sans',sans-serif;
+    font-weight:600;
+    font-size:0.92rem;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+    margin:1.6rem 0 0.7rem;
+    color:#6B6552;
+  }
+  p.body-text{
+    font-size:0.98rem;
+    line-height:1.7;
+    color:#3A372E;
+    margin-bottom:1.8rem;
+  }
+  table.compare{
+    width:100%;
+    border-collapse:collapse;
+    margin:0.6rem 0 2.4rem;
+    font-size:0.88rem;
+  }
+  table.compare th, table.compare td{
+    text-align:left;
+    padding:0.65rem 0.8rem;
+    border-bottom:1px solid var(--line-light);
+    vertical-align:top;
+  }
+  table.compare th{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.64rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:#8A7F63;
+    font-weight:500;
+  }
+  table.compare td:first-child{
+    font-weight:600;
+    color:var(--charcoal);
+  }
+  .insight-box{
+    background:#fff;
+    border:1px solid var(--line-light);
+    border-radius:4px;
+    padding:1.4rem 1.6rem;
+    margin:0 0 2.2rem;
+  }
+  .insight-box p{
+    font-size:0.95rem;
+    line-height:1.65;
+    color:#3A372E;
+    margin:0;
+  }
+  ol.recs{
+    list-style:none;
+    counter-reset:rec;
+    margin-bottom:0.5rem;
+  }
+  ol.recs li{
+    counter-increment:rec;
+    position:relative;
+    padding:0 0 1.9rem 2.6rem;
+    border-bottom:1px solid var(--line-light);
+    margin-bottom:1.9rem;
+  }
+  ol.recs li:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+  ol.recs li::before{
+    content:counter(rec, decimal-leading-zero);
+    position:absolute;
+    left:0;
+    top:0.1rem;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.85rem;
+    color:var(--gold);
+    font-weight:500;
+  }
+  ol.recs h4{
+    font-family:'Work Sans',sans-serif;
+    font-weight:600;
+    font-size:1.02rem;
+    margin-bottom:0.5rem;
+    color:var(--charcoal);
+  }
+  ol.recs p{
+    font-size:0.94rem;
+    line-height:1.65;
+    color:#3A372E;
+    margin-bottom:0.6rem;
+  }
+  ol.recs .signal{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    color:#9C7A28;
+    letter-spacing:0.01em;
+  }
+  .note{
+    border-left:2px solid var(--gold);
+    padding:0.2rem 0 0.2rem 1.2rem;
+    font-size:0.92rem;
+    line-height:1.6;
+    color:#5A5646;
+    margin:2.8rem 0 0.5rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">← Back to portfolio</a>
+
+  <span class="eyebrow">eCommerce — 2026</span>
+  <h1>Competitive Benchmark: Centrepoint's Women's Store vs. Namshi, Myntra &amp; Shein</h1>
+  <p class="lede">An online merchandising audit of Centrepoint's Women's category pages — homepage, product listing, and product detail — against three competitors with very different strategies, to find where the shopping experience wins or loses a customer before checkout even comes into it.</p>
+  <div class="tags">
+    <span class="tag">Online Merchandising</span>
+    <span class="tag">UX Benchmarking</span>
+    <span class="tag">CLP / PLP / PDP</span>
+    <span class="tag">Conversion Strategy</span>
+  </div>
+
+  <h2 class="section-head">Why I looked at this</h2>
+  <p class="body-text">A category page, a product grid, and a product detail page each make a different kind of promise to a shopper. I wanted to see how Centrepoint's Women's store compares to three very different competitors — Namshi (regional fashion specialist), Myntra (brand-depth marketplace), and Shein (global fast-fashion marketplace) — not to rank them, but to find specific, adoptable fixes Centrepoint could ship.</p>
+
+  <h2 class="section-head">How each competitor opens the Women's store</h2>
+  <table class="compare">
+    <tr><th>Retailer</th><th>Approach</th></tr>
+    <tr><td>Centrepoint</td><td>Fashion-only navigation, promo-code banner leads</td></tr>
+    <tr><td>Shein</td><td>General marketplace — fashion is one category among many</td></tr>
+    <tr><td>Namshi</td><td>Editorial spotlight product leads, before category tiles</td></tr>
+    <tr><td>Myntra</td><td>Brand-forward — "Categories to Bag," then "Explore Top Brands"</td></tr>
+  </table>
+
+  <h2 class="section-head">The catalogue grid tells a different story than the filter count</h2>
+  <table class="compare">
+    <tr><th>Retailer</th><th>Catalogue size</th><th>Filters</th></tr>
+    <tr><td>Centrepoint</td><td>2,828 products</td><td>15 (Style, Occasion, Material, Discount Range)</td></tr>
+    <tr><td>Namshi</td><td>21,649 results</td><td>15 (Delivery Type, Dress Style, Pattern)</td></tr>
+    <tr><td>Myntra</td><td>231,172 items</td><td>9 only</td></tr>
+    <tr><td>Shein</td><td>— </td><td>17, broader attribute-level filtering</td></tr>
+  </table>
+  <div class="insight-box">
+    <p><strong>The finding:</strong> filter count doesn't track catalogue size the way you'd expect. Myntra carries ten times Namshi's SKU count but runs the shallowest filter panel of the four — it bets on brand depth (3,000+ brands) to do the narrowing work that attribute filters usually do.</p>
+  </div>
+
+  <h2 class="section-head">The product page: four different conversion levers</h2>
+  <table class="compare">
+    <tr><th></th><th>Centrepoint</th><th>Namshi</th><th>Myntra</th><th>Shein</th></tr>
+    <tr><td>Urgency signal</td><td>"18 Views in last 24h"</td><td>Flash-sale countdown</td><td>Not observed</td><td>"999K+ recently sold"</td></tr>
+    <tr><td>Financing</td><td>Tabby, 4 interest-free</td><td>Tamara + Tabby, up to 4 payments</td><td>Coupon + 3 bank discounts + EMI</td><td>Points at checkout only</td></tr>
+    <tr><td>Reviews</td><td>Zero reviews, "Write a Review" prompt</td><td>Not observed</td><td>Available</td><td>Available</td></tr>
+  </table>
+  <p class="body-text">Each retailer leads the product page with a different lever: Centrepoint stacks urgency with loyalty points (Shukrans) and Tabby installments; Namshi runs two countdown timers at once — a delivery window and a flash-sale clock — plus a Premium badge; Myntra goes discount-led, struck-through MRP and a 78% OFF badge with the size chart linked before size selection; Shein leads with social proof, putting star rating and comment count directly under the title, before price.</p>
+
+  <h2 class="section-head">Recommendations</h2>
+  <h3 class="sub-head">Things we should adopt</h3>
+  <ol class="recs">
+    <li>
+      <h4>Fix the review-volume gap, not the review feature.</h4>
+      <p>Centrepoint's sampled PDP had the review function live but zero reviews on it. Recommend a post-purchase nudge through email or app notification, prompting specifically for fit, size, and quality feedback — review volume is the actual gap, not the feature itself.</p>
+      <span class="signal">Benchmark signal: Shein's visible review / fit-consensus layer</span>
+    </li>
+    <li>
+      <h4>Surface delivery promises earlier.</h4>
+      <p>Centrepoint already shows estimated delivery ("Get it Tomorrow," or a specific date) on the PDP. Test bringing that same signal onto the PLP as a badge, so delivery speed factors into the product choice before a shopper ever opens the detail page.</p>
+      <span class="signal">Benchmark signal: Namshi's delivery visibility + Centrepoint's existing PDP capability</span>
+    </li>
+    <li>
+      <h4>Add model details for better fit visualization.</h4>
+      <p>Surface model height, size worn, and fit notes closer to the size selector, backed by a clear size guide and garment measurements — giving shoppers more confidence in fit before they commit to a size and add to bag.</p>
+    </li>
+  </ol>
+
+  <p class="note">Independent research project for an eCommerce coursework module at SP Jain School of Global Management. Methodology: direct product-page sampling across all four retailers' Women's stores, UAE storefronts, comparing CLP structure, PLP filter and catalogue depth, and PDP conversion-lever placement.</p>
+
+</div>
+</body>
+</html>
